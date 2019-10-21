@@ -1,0 +1,99 @@
+<odoo>
+    <menuitem id="sale.sale_menu_root"
+        name="Abacus"
+        web_icon="sale,static/description/icon.png"
+        sequence="7"/>
+
+    <record model="ir.ui.view" id="view_sales_config_inherited">
+        <field name="name">ResConfigSettingsInherited</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="///div[@data-key='sale_management']/h2" position="before">
+                <h2>E-Commerce Instalments</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box" id="sale_config_online_confirmation_sign">
+                        <div class="o_setting_right_pane">
+                            <label for="yearly_interest_rate"/>
+                            <div class="text-muted">
+                                Set interest rate as per yearly bases
+                            </div>
+                            <field name="yearly_interest_rate" groups="base.group_user"/>
+                        </div>
+                    </div>
+
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_form_inherited" model="ir.ui.view">
+        <field name="name">sale.order.form.inherited</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[3]" position="after">
+                <page string="Payment Schedule" name="payment_schedule">
+                    <field name="instalments_details" widget="one2many_list" mode="tree" >
+                        <tree editable="bottom">
+                            <field name="currency_id" invisible="1" groups="sales_team.group_sale_salesman" />
+                            <field name="serial_number" groups="sales_team.group_sale_salesman" />
+                            <field name="monthly_date" groups="sales_team.group_sale_salesman" />
+                            <field name="intial_principal" widget="monetary" options="{'currency_field': 'currency_id'}" groups="sales_team.group_sale_salesman"  />
+                            <field name="monthly_payment" widget="monetary" options="{'currency_field': 'currency_id'}" groups="sales_team.group_sale_salesman" />
+                            <field name="monthly_interest" widget="monetary" options="{'currency_field': 'currency_id'}" groups="sales_team.group_sale_salesman" />
+                            <field name="principal_amount" widget="monetary" options="{'currency_field': 'currency_id'}" groups="sales_team.group_sale_salesman" />
+                            <field name="end_balance" widget="monetary" options="{'currency_field': 'currency_id'}" groups="sales_team.group_sale_salesman" />
+                            <field name="payment_recieved" groups="sales_team.group_sale_salesman" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+
+            <xpath expr="//page[@name='payment_schedule']" position="after">
+                <page string="Income Source Information" name="income_source_information">
+
+                </page>
+            </xpath>
+
+            <xpath expr="///page[@name='income_source_information']" position="after">
+                <page string="Credit Score Information" name="credit_score_information">
+
+                </page>
+            </xpath>
+
+            <xpath expr="//notebook/page[2]" position="attributes">
+                  <attribute name="string">Previous Purchase History</attribute>
+            </xpath>
+
+            <xpath expr="//notebook/page[3]" position="attributes">
+                  <attribute name="string">Telephone Billing History</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                <field name="total_instalment_amount" widget="monetary" />
+                <field name="payment_period" />
+                <field name="total_interest_rate" />
+                <field name="monthly_payment" widget="monetary" />
+                <field name="abacus_result" />
+            </xpath>
+
+            <xpath expr="//header/button[10]" position="after">
+                <button name="abacus_decision" type="object" string="Abacus Decisioning" attrs="{'invisible': [('state', 'not in', ['draft','sent'])]}" />
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="abacus_button_extra_field" model="ir.ui.view">
+        <field name="name">abacus.button_field.form.inherited</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="abacus_result" />
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

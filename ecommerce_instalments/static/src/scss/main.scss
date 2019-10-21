@@ -1,0 +1,26 @@
+#instalments_block h1,
+.card.custom h2,{
+    line-height: 1.1;
+    color: #00A09D;
+}
+
+#instalments_block h1,
+.card.custom h2,
+.card.custom h5{
+    font-weight: 300;
+}
+
+.card.custom h5{
+    color: #3d3e45;
+}
+
+#instalments_block h1,
+.card.custom h2,
+.card.custom h5{
+    user-select: none;
+    opacity: .9;
+}
+
+.instalments_block{
+    visibility: hidden;
+}

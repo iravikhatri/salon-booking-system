@@ -1,0 +1,133 @@
+<odoo>
+
+	<act_window id="action_appointment_booking_dashboard" name="Dashboard" res_model="booking.dashboard"  view_mode="kanban" />
+	<menuitem id="menu_appointment_booking_dashboard" name="Appointment Booking" action="action_appointment_booking_dashboard" />
+	
+	<act_window id="action_room_booking" name="Room Booking" res_model="room.booking"  view_mode="tree,form" />
+	<menuitem id="menu_room_booking" name="Room Booking"  parent="menu_appointment_booking_dashboard" action="action_room_booking"/>
+	
+    <act_window id="action_booking_info" name="Booking Info" res_model="booking.info"  view_mode="tree,form" />
+    <menuitem id="menu_booking_info" name="Booking Info" parent="menu_appointment_booking_dashboard" action="action_booking_info"/>
+
+    <!-- room booking view -->
+	<record id="room_booking_view" model="ir.ui.view">
+    	<field name="name">room.booking</field>
+    	<field name="model">room.booking</field>
+    	<field name="arch" type="xml">
+        	<form>
+          		<sheet>
+            		<group name="group_top">
+                		<field name="name" />
+                		<field name="code" required="1" />
+                		<field name="room_time_slot" widget="one2many_list" mode="tree" >
+                    		<tree editable="bottom">
+                        		<field name="name" />
+                        		<field name="time_from" />
+                        		<field name="time_to" />
+                    		</tree>
+                		</field>
+            		</group>
+          		</sheet>
+        	</form>
+    	</field>
+    </record>
+
+    <!--  room booking tree view -->
+	<record id="room_booking_tree_view" model="ir.ui.view">
+		<field name="name">room.booking.tree</field>
+		<field name="model">room.booking</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name" />
+				<field name="code" />
+				<field name="room_time_slot" />
+			</tree>
+		</field>
+    </record>
+
+    <!-- room time slot view -->
+	<record id="room_time_slot_tree_view" model="ir.ui.view">
+		<field name="name">room.time.slot.tree</field>
+		<field name="model">room.time.slot</field>
+		<field name="arch" type="xml">
+			<tree editable="bottom">
+				<field name="time_from" />
+				<field name="time_to" />
+			</tree>
+		</field>
+    </record>
+
+    <!--  booking info view  -->
+    <record id="booking_info_view" model="ir.ui.view">
+        <field name="name">booking.info</field>
+        <field name="model">booking.info</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="group_top">
+                        <group name='group_left'>
+                            <field name="name" />
+                            <field name="time_from" />
+                            <field name="room_code" />
+                            <field name="customer_name" />
+                        </group>
+                        <group name='group_right'>
+                            <field name="date" />
+                            <field name="time_to" />
+                            <field name="status" />
+                            <field name="sales_person" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--  booking info tree view -->
+    <record id="booking_info_view_tree" model="ir.ui.view">
+        <field name="name">booking.info.tree</field>
+        <field name="model">booking.info</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="customer_name" />
+                <field name="date" />
+                <field name="time_from" />
+                <field name="time_to" />
+                <field name="total_appointment_time" />
+                <field name="room_code" />
+                <field name="sales_person" />
+                <field name="status" />
+            </tree>
+        </field>
+    </record>
+
+    <!--  product.template view inherited  -->
+    <record model="ir.ui.view" id="product_feature_view_inherited">
+        <field name="name">product.template.inherited</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="website_sale.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_standard_price']" position="inside">
+                <field name="appointment_time" attrs="{'invisible' :[('type','!=', 'service')]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_order_form_inherited">
+        <field name="name">sale.order.form.inherited</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='sale_shipping']" position="before">
+                 <group string="Appointment Booking Information" name="room_booking_information">
+                     <field name="total_appointment_time"/>
+                     <field name="room_allotted" attrs="{'required': [('total_appointment_time','!=', 0), ('state', '=', 'sale')]}"/>
+                     <field name="date" attrs="{'required': [('total_appointment_time','!=', 0), ('state', '=', 'sale')]}"/>
+                     <field name="time"/>
+                 </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

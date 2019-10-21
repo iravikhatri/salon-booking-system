@@ -1,0 +1,84 @@
+<odoo>
+    <template id="new_styles_assets" name="new styles assets" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/css" href="/ecommerce_instalments/static/src/scss/main.scss" />
+            <script type="text/javascript" src="/ecommerce_instalments/static/src/js/main.js"></script>
+        </xpath>
+    </template>
+
+    <template id="payment_inherited" inherit_id="website_sale.payment" name="Payment">
+        <xpath expr="//div[@id='wrap']/div/div/div[1]" position="after">
+            <div class="col-12" id="instalments_block">
+                <div class="row mb-4">
+                    <div class="col-12 mb-4 mt-2">
+                        <h1 class="font-weight-lighter">Select the payment plan:</h1>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="card custom month_card mb-2" id="month3_card">
+                            <div class="card-body">
+                                <h2 class="card-title font-weight-lighter"><span id="month3_per_month_amount"></span>/mon for 3 months</h2>
+                                <h5 class="card-title mb-0 font-weight-lighter">
+                                    Interest to be paid: <span id="month3_total_interest_amount"></span>
+                                    <div class="form-check float-right">
+                                        <label class="form-check-label mr-4" for="exampleCheck1"></label>
+                                        <input type="checkbox" class="form-check-input mt-1 pl-2 emi_value" id="month3" name="month3" value="3" />
+                                    </div>
+                                </h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="card custom month_card mb-2" id="month6_card">
+                            <div class="card-body">
+                                <h2 class="card-title font-weight-lighter"><span id="month6_per_month_amount"></span>/mon for 6 months</h2>
+                                <h5 class="card-title mb-0 font-weight-lighter">
+                                    Interest to be paid: <span id="month6_total_interest_amount"></span>
+                                    <div class="form-check float-right">
+                                        <label class="form-check-label mr-4" for="exampleCheck1"></label>
+                                        <input type="checkbox" class="form-check-input mt-1 pl-2 emi_value" id="month6" name="month6" value="6" />
+                                    </div>
+                                </h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="card custom month_card mb-2" id="month12_card">
+                            <div class="card-body">
+                                <h2 class="card-title font-weight-lighter"><span id="month12_per_month_amount"></span>/mon for 12 months</h2>
+                                <h5 class="card-title mb-0 font-weight-lighter">
+                                    Interest to be paid: <span id="month12_total_interest_amount"></span>
+                                    <div class="form-check float-right">
+                                        <label class="form-check-label mr-4" for="exampleCheck1"></label>
+                                        <input type="checkbox" class="form-check-input mt-1 pl-2 emi_value" id="month12" name="month12" value="12" />
+                                    </div>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//div[@id='wrap']/div[1]" position="attributes">
+            <attribute name="style">margin-bottom:175px;</attribute>
+        </xpath>
+    </template>
+
+    <template id="address_inherited" inherit_id="website_sale.address" name="Address Management">
+        <xpath expr="//form/div/t[5]" position="replace">
+        </xpath>
+        <xpath expr="//form/div/div[9]" position="replace">
+            <input type="hidden" name="city" t-attf-class="form-control #{error.get('city') and 'is-invalid' or ''}" value="Seoul" />
+        </xpath>
+        <xpath expr="//form/div/div[10]" position="replace">
+            <input type="hidden" id="country_id" name="country_id" t-attf-class="form-control #{error.get('country_id') and 'is-invalid' or ''}" value="121" />
+        </xpath>
+    </template>
+
+    <template id="livila_footer" inherit_id="website.layout" name="Footer">
+       <xpath expr="//footer" position="replace">
+        </xpath>
+    </template>
+
+</odoo>
