@@ -1,0 +1,395 @@
+<odoo>
+    <!-- Hero Image 1 -->
+    <template id="hero_image_one" name="Hero Image 1">
+        <section class="hero_image_one">
+			<div class="hero_image_one_box">
+				<div class="hero_image_one_background_image">
+					<img src="/theme_vivre/static/src/images/hair11.jpg" alt=""/>
+				</div>
+				<div class="hero_image_one_cover">
+					<div class="hero_image_one_slogan">
+						<h3>Where style meets creativity.</h3>
+					</div>
+					<div class="hero_image_one_content">
+						<p>We at Vivre turns dream styles into reality which you never imagine. We have industry best professional stylist who are creative, imaginative and experienced which give you the best style as you want.</p>
+						<div class="vivre_btn_box">
+							<a href="" class="vivre_btn" >Click For Booking</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    </template>
+
+	<!-- Heading 1 -->
+	<template id="heading_one" name="Heading 2">
+        <section class="heading_one">
+            <div class="container">
+				<div class="heading_one-content">
+					<h1>Exceptional designing for exceptional Spaces.</h1>
+					<p>That is originally why the concept evolved to include accessories. We found that furniture sells better when you show it with accessories.</p>
+				</div>
+			</div>
+        </section>
+    </template>
+
+    <!-- Heading 2 -->
+    <template id="heading_two" name="Heading 2">
+        <section class="heading_two">
+           <div class="container">
+				<div class="heading_two-content">
+					<h1>Exceptional designing for exceptional Spaces.</h1>
+				</div>
+			</div>
+        </section>
+    </template>
+
+	<!-- Offers Block 1 -->
+    <template id="offers_one" name="Offers Block 1">
+        <section class="offers_one">
+			<div class="offers_one_gridbox">
+				<div class="offers_one_box">
+					<div class="offers_one_image offers_one_image_padding">
+						<img src="/theme_vivre/static/src/images/offers1.jpg" alt=""/>
+					</div>
+					<div class="offers_one_content">
+						<h1>Hair Style</h1>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, autem! Quae architecto praesentium esse qui.</p>
+						<div>
+							<a href="" class="vivre_btn">Click Here</a>
+						</div>
+					</div>
+				</div>
+				<div class="offers_one_box">
+					<div class="offers_one_image offers_one_image_padding">
+						<img src="/theme_vivre/static/src/images/offers2.jpg" alt=""/>
+					</div>
+					<div class="offers_one_content">
+						<h1>Hair Color</h1>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, autem! Quae architecto praesentium esse qui.</p>
+						<div>
+							<a href="" class="vivre_btn">Click Here</a>
+						</div>
+					</div>
+				</div>
+				<div class="offers_one_box">
+					<div class="offers_one_image offers_one_image_padding">
+						<img src="/theme_vivre/static/src/images/offers3.jpg" alt=""/>
+					</div>
+					<div class="offers_one_content">
+						<h1>Hair Rebonding</h1>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, autem! Quae architecto praesentium esse qui.</p>
+						<div>
+							<a href="" class="vivre_btn">Click Here</a>
+						</div>
+					</div>
+				</div>
+				<div class="offers_one_box">
+					<div class="offers_one_image">
+						<img src="/theme_vivre/static/src/images/offers4.jpg" alt=""/>
+					</div>
+					<div class="offers_one_content">
+						<h1>Full Make Up</h1>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, autem! Quae architecto praesentium esse qui.</p>
+						<div>
+							<a href="" class="vivre_btn">Click Here</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    </template>
+
+	<!-- Intro Block 1 -->
+    <template id="intro_block_one" name="Intro Block 1">
+        <section class="intro_block_one">
+			<div class="intro_block_one_box">
+				<div class="intro_block_one_content">
+					<h1>Welcome to the Vivre</h1>
+				</div>
+				<div class="intro_block_one_image">
+					<img src="/theme_vivre/static/src/images/salon.jpg" alt=""/>
+				</div>
+				<div class="intro_block_one_content">
+					<p>Our salon has been serving the Williamsburg, Brooklyn community since 2004. Every day we strive to bring creativity, diversity, and quality services to our neighborhood. Our knowledgeable staff is always working on mastering the latest techniques and products. Above all, we make sure our guests are cared for and leave each appointment feeling beautiful and confident.</p>
+					<h4>Come and be your best self.</h4>
+				</div>
+			</div>
+		</section>
+    </template>
+
+	<!-- Content Block 1 -->
+    <template id="content_block_one" name="Content Block 1">
+        <section class="content_block">
+			<div class="custom_container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="content_block_image">
+							<img src="/theme_vivre/static/src/images/content_block1.jpg" alt=""/>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="content_block_content content_block_one_content">
+							<h1 class="pb-3">Home to the city's most creative stylists</h1>
+							<p class="pb-3">Our crazy-talented master stylists will connect with you on a personal level, using their creativity and skill to envision a natural, ready-to-wear style that embraces your individuality and lifestyle.</p>
+							<h4>Where style meets exceptional service</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    </template>
+
+	<!-- Content Block 2 -->
+    <template id="content_block_two" name="Content Block 2">
+        <section class="content_block">
+			<div class="custom_container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="content_block_content content_block_two_content">
+							<h1 class="pb-3">Home to the city's most creative stylists</h1>
+							<p class="pb-3">Our crazy-talented master stylists will connect with you on a personal level, using their creativity and skill to envision a natural, ready-to-wear style that embraces your individuality and lifestyle. </p>
+							<h4>Where style meets exceptional service</h4>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="content_block_image">
+							<img src="/theme_vivre/static/src/images/content_block2.jpg" alt=""/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    </template>
+
+	<!-- Team Gallery 1 -->
+    <template id="team_gallery_one" name="Team Gallery 1">
+        <section class="team_gallery_one">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-sm-6 col-md-3">
+						<div class="team_one_card">
+							<div class="team_one_image">
+								<img src="/theme_vivre/static/src/images/team1.jpg" alt=""/>
+							</div>
+							<div class="team_one_content">
+								<h4>Skylar Evans</h4>
+								<h5>Hair Stylist</h5>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus totam ullam fuga, obcaecati libero explicabo.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-3">
+						<div class="team_one_card">
+							<div class="team_one_content">
+								<h4>Alejandro Iglesias</h4>
+								<h5>Hair Stylist</h5>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus totam ullam fuga, obcaecati libero explicabo.</p>
+							</div>
+							<div class="team_one_image">
+								<img src="/theme_vivre/static/src/images/team2.jpg" alt=""/>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-3">
+						<div class="team_one_card">
+							<div class="team_one_image">
+								<img src="/theme_vivre/static/src/images/team3.jpg" alt=""/>
+							</div>
+							<div class="team_one_content">
+								<h4>David Bector</h4>
+								<h5>Hair Stylist</h5>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus totam ullam fuga, obcaecati libero explicabo.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-3">
+						<div class="team_one_card">
+							<div class="team_one_content">
+								<h4>Maria Johnson</h4>
+								<h5>Hair Stylist</h5>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus totam ullam fuga, obcaecati libero explicabo.</p>
+							</div>
+							<div class="team_one_image">
+								<img src="/theme_vivre/static/src/images/team4.jpg" alt=""/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    </template>
+
+	<!-- Image Gallery -->
+	<template id="image_gallery_one" name="Image Gallery">
+        <section class="image_gallery_one">
+            <div class="container">
+				<div class="image_gallery_one_gridbox">
+					<div class="image_gallery_one_image">
+						<img src="/theme_vivre/static/src/images/image1.jpg" alt=""/>
+					</div>
+					<div class="image_gallery_one_image">
+						<img src="/theme_vivre/static/src/images/image2.jpg" alt=""/>
+					</div>
+					<div class="image_gallery_one_image">
+						<img src="/theme_vivre/static/src/images/image3.jpg" alt=""/>
+					</div>
+					<div class="image_gallery_one_image">
+						<img src="/theme_vivre/static/src/images/image4.jpg" alt=""/>
+					</div>
+					<div class="image_gallery_one_image">
+						<img src="/theme_vivre/static/src/images/image5.jpg" alt=""/>
+					</div>
+					<div class="image_gallery_one_image">
+						<img src="/theme_vivre/static/src/images/image6.jpg" alt=""/>
+					</div>
+					<div class="image_gallery_one_image">
+						<img src="/theme_vivre/static/src/images/image7.jpg" alt=""/>
+					</div>
+					<div class="image_gallery_one_image">
+						<img src="/theme_vivre/static/src/images/image8.jpg" alt=""/>
+					</div>
+				</div>
+			</div> 
+        </section>
+    </template>
+
+	<!-- Brand Gallery -->
+	<template id="brand_gallery_one" name="Brand Gallery 1">
+        <section class="brand_gallery_one">
+            <div class="container">
+				<div class="row">
+					<div class="col-md-2 col-sm-4 col-6">
+						<div class="item">
+							<img src="/theme_vivre/static/src/images/brand1.png"/>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-4 col-6">
+						<div class="item">
+							<img src="/theme_vivre/static/src/images/brand2.png"/>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-4 col-6">
+						<div class="item">
+							<img src="/theme_vivre/static/src/images/brand3.png"/>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-4 col-6">
+						<div class="item">
+							<img src="/theme_vivre/static/src/images/brand4.png"/>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-4 col-6">
+						<div class="item">
+							<img src="/theme_vivre/static/src/images/brand5.png"/>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-4 col-6">
+						<div class="item">
+							<img src="/theme_vivre/static/src/images/brand6.png"/>
+						</div>
+					</div>
+				</div> 
+			</div> 
+        </section>
+    </template>
+
+
+    <template id="add_title_hero_image" inherit_id="website.snippets" name="Hero Image Title">
+        <xpath expr="//div[@id='snippet_structure']" position="replace"></xpath>
+        <xpath expr="//div[@id='snippet_feature']" position="replace"></xpath>
+        <xpath expr="//div[@id='snippet_effect']" position="replace"></xpath>
+        <xpath expr="//div[@id='snippet_content']" position="replace"></xpath>
+
+        <xpath expr="//div[@id='o_scroll']" position="inside">
+            <div id="snippet_hero" class="o_panel">
+                <div class="o_panel_header">
+                    <i class="fa fa-th-large"/> Hero Image
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="theme_vivre.hero_image_one" t-thumbnail="/theme_vivre/static/src/images/banner.png"/>
+                </div>
+            </div>
+        </xpath>
+
+		<xpath expr="//div[@id='snippet_hero']" position="after">
+            <div id="snippet_offer" class="o_panel">
+                <div class="o_panel_header">
+                    <i class="fa fa-th-large"/> Brand Gallery 
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="theme_vivre.brand_gallery_one" t-thumbnail="/theme_vivre/static/src/images/banner.png"/>
+                </div>
+            </div>
+        </xpath>
+
+		<xpath expr="//div[@id='snippet_hero']" position="after">
+            <div id="snippet_offer" class="o_panel">
+                <div class="o_panel_header">
+                    <i class="fa fa-th-large"/> Image Gallery 
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="theme_vivre.image_gallery_one" t-thumbnail="/theme_vivre/static/src/images/banner.png"/>
+                </div>
+            </div>
+        </xpath>
+
+		<xpath expr="//div[@id='snippet_hero']" position="after">
+            <div id="snippet_team_gallery" class="o_panel">
+                <div class="o_panel_header">
+                    <i class="fa fa-th-large"/> Team Gallery
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="theme_vivre.team_gallery_one" t-thumbnail="/theme_vivre/static/src/images/banner.png"/>
+                </div>
+            </div>
+        </xpath>
+
+		<xpath expr="//div[@id='snippet_hero']" position="after">
+            <div id="snippet_offer" class="o_panel">
+                <div class="o_panel_header">
+                    <i class="fa fa-th-large"/> Offers Block
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="theme_vivre.offers_one" t-thumbnail="/theme_vivre/static/src/images/banner.png"/>
+                </div>
+            </div>
+        </xpath>
+
+		<xpath expr="//div[@id='snippet_hero']" position="after">
+            <div id="snippet_offer" class="o_panel">
+                <div class="o_panel_header">
+                    <i class="fa fa-th-large"/> Content Block
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="theme_vivre.content_block_one" t-thumbnail="/theme_vivre/static/src/images/banner.png"/>
+					<t t-snippet="theme_vivre.content_block_two" t-thumbnail="/theme_vivre/static/src/images/banner.png"/>
+                </div>
+            </div>
+        </xpath>
+
+		<xpath expr="//div[@id='snippet_hero']" position="after">
+            <div id="snippet_content_block" class="o_panel">
+                <div class="o_panel_header">
+                    <i class="fa fa-th-large"/> Intro Block
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="theme_vivre.intro_block_one" t-thumbnail="/theme_vivre/static/src/images/banner.png"/>
+                </div>
+            </div>
+        </xpath>
+
+		<xpath expr="//div[@id='snippet_hero']" position="after">
+            <div id="snippet_offer" class="o_panel">
+                <div class="o_panel_header">
+                    <i class="fa fa-th-large"/> Headings
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="theme_vivre.heading_one" t-thumbnail="/theme_vivre/static/src/images/banner.png"/>
+					<t t-snippet="theme_vivre.heading_two" t-thumbnail="/theme_vivre/static/src/images/banner.png"/>
+                </div>
+            </div>
+        </xpath>
+
+    </template>
+</odoo>
