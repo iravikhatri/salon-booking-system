@@ -1,5 +1,24 @@
 $( document ).ready(function() {
 
+    function getYesterdaysDate() {
+        var date = new Date();
+        date.setDate(date.getDate());
+        return `${(date.getMonth()+1)}/${date.getDate()}/${date.getFullYear()}`
+    }
+
+    var date1 = String(window.location.pathname).endsWith('/choose/date')
+
+    if(date1){
+        var script = document.createElement('script');
+        script.src = 'https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js';
+        document.head.appendChild(script);
+
+        $('#appoint_date').datepicker({
+            minDate: getYesterdaysDate(),
+            uiLibrary: 'bootstrap4',
+        });
+    }
+
     function number_format(temp_number) {
         var return_number;
         if((temp_number/2) < 10){
@@ -20,17 +39,6 @@ $( document ).ready(function() {
         }
         return return_number
     }
-
-    function getYesterdaysDate() {
-        var date = new Date();
-        date.setDate(date.getDate());
-        return `${(date.getMonth()+1)}/${date.getDate()}/${date.getFullYear()}`
-    }
-
-    $('#appoint_date').datepicker({
-        minDate: getYesterdaysDate(),
-        uiLibrary: 'bootstrap4',
-    });
 
     $('#appoint_date').change(function(){
         appoint_date = $('input[name="appoint_date"]').val();

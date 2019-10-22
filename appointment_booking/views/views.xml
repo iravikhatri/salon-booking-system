@@ -1,13 +1,13 @@
 <odoo>
 
-	<act_window id="action_appointment_booking_dashboard" name="Dashboard" res_model="booking.dashboard"  view_mode="kanban" />
-	<menuitem id="menu_appointment_booking_dashboard" name="Appointment Booking" action="action_appointment_booking_dashboard" />
+	<act_window id="action_appointment_booking_dashboard" name="Booking Info" res_model="booking.info"  view_mode="tree,form"/>
+	<menuitem id="menu_appointment_booking_dashboard" name="Booking Info" action="action_appointment_booking_dashboard" />
 	
 	<act_window id="action_room_booking" name="Room Booking" res_model="room.booking"  view_mode="tree,form" />
 	<menuitem id="menu_room_booking" name="Room Booking"  parent="menu_appointment_booking_dashboard" action="action_room_booking"/>
 	
-    <act_window id="action_booking_info" name="Booking Info" res_model="booking.info"  view_mode="tree,form" />
-    <menuitem id="menu_booking_info" name="Booking Info" parent="menu_appointment_booking_dashboard" action="action_booking_info"/>
+    <!-- <act_window id="action_booking_info" name="Booking Info" res_model="booking.info"  view_mode="tree,form" />
+    <menuitem id="menu_booking_info" name="Booking Info" parent="menu_appointment_booking_dashboard" action="action_booking_info"/> -->
 
     <!-- room booking view -->
 	<record id="room_booking_view" model="ir.ui.view">

@@ -1,8 +1,17 @@
 $(document).ready(function(){
 
-     $('#datepicker').datepicker({
-        uiLibrary: 'bootstrap4',
-    });
+    var rooms = String(window.location.pathname).includes('rooms')
+    var salespersons = String(window.location.pathname).includes('salespersons')
+    if(salespersons || rooms){
+
+        var script = document.createElement('script');
+        script.src = 'https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js';
+        document.head.appendChild(script);
+
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4',
+        });
+    }
 
     for(var i = 0; i < 60; i++){
         $(".time-margin" + String(i)).css("margin-left", String((i*100) + 58)  + "px");

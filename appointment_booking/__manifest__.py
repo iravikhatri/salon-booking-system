@@ -2,18 +2,30 @@
 {
     'name': "Appointment Booking",
 
-    'summary': """
-        Shomodules listing or apps.openerp.com""",
+'summary': """
+        
+    """,
 
     'description': """
-        Long description of module's purpose
+       
     """,
 
     'author': "TechNeith",
+
     'website': "https://www.techneith.com",
 
     'category': 'Uncategorized',
-    'version': '0.1',
+
+	'images': ['static/description/images/banner.png'],
+
+    'price' : 299,
+
+    'currency' : 'EUR',
+
+    'version': '1.0',
+
+    "license" : 'LGPL-3',
+
 
     'depends': ['base', 'sale_management', 'website_sale'],
 
