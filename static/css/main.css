@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600&display=swap");
+
+:root {
+    --navbar-bg-color:#fff;
+    --navbar-text-color: #0c0c0c;
+    --footer-bg-color: #0c0c0c;
+    --footer-text-color: #fff;
+    --btn-color: #0c0c0c;
+    --oswald: 'Oswald', sans-serif;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--oswald);
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+/* Footer */
+
+.footer{
+    height: auto !important;
+    width: 100% !important;
+    background-color: var(--footer-bg-color) !important;
+    color: var(--footer-text-color);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer .footer-block{
+    width: 240px;
+}
+
+.footer .footer_logo{
+	height: auto;
+	width: 100%;
+}
+
+.footer .footer_logo img{
+	height: 60px;
+	padding: 10px 0px;
+}
+
+.footer  .footer_social_links{
+	height: 60px;
+	display: flex;
+}
+
+.footer .social_links{
+	line-height: 60px;
+}
+
+.footer .float_links{
+	float: right;
+}
+
+.footer .fa{
+	padding: 20px;
+	font-size: 18px;
+    padding: 0px !important;
+}
+
+.footer a.social_link{
+	margin: 5px;
+	padding: 7px;
+	border: 1px solid #fff;
+}
+
+footer.footer a{
+    font-size: 12px;
+    color: var(--footer-text-color);
+    opacity: 0.7;
+    margin: 0px;
+}
+
+.footer a:hover,
+.footer .footer-slogan:hover,
+.footer .para-block:hover{
+    color: var(--footer-text-color);
+    opacity: 1;
+}
+
+.footer h4{
+	margin-top: 40px;
+	font-size: 18px;
+	font-weight: 200;
+}
+
+.footer .para-block{
+    display: block;
+    font-size: 12px;
+    color: var(--footer-text-color);
+    opacity: 0.7;
+    margin: 0px;
+}
+
+.footer .para{
+    padding: 4px 0px;
+}
+
+.block{
+    display: block;
+    padding: 2px 0px;
+}
+
+@media (max-width: 768px) {
+    .footer .footer-block{
+        width: 120px;
+    }
+
+	footer.footer .float_links{
+		float: left;
+	}
+}
+
+
+
+a.vivre_btn{
+	padding: 15px 40px;
+	background-color: #000;
+	color: #fff;
+}
+
+.vivre_btn:hover{
+	text-decoration: none;
+	background-image: linear-gradient(to right, rgb(170, 178, 250), rgb(226, 72, 231));
+	color: #fff;
+	transition: .5s;
+}
+
+.custom_container{
+	margin: 0px auto;
+	width: 95%;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Oswald', sans-serif;
+}
+
+@media (max-width: 768px){
+	a.vivre_btn{
+		padding: 10px 25px;
+		background-color: #000;
+		color: #fff;
+	}
+}
+
+
+/* Hero */
+
+.hero_image_one {
+    height: 660px;
+    width: 100%;
+}
+
+.hero_image_one_box {
+    position: relative;
+    height: 660px;
+    width: 100%;
+}
+
+.hero_image_one_background_image {
+    position: absolute;
+    height: 660px;
+    width: 100%;
+}
+
+.hero_image_one_background_image img {
+    object-fit: cover;
+    height: 660px;
+    width: 100%;
+}
+
+.hero_image_one_cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.hero_image_one_slogan {
+    position: absolute;
+    bottom: 0;
+    padding: 0% 0% 5% 5%;
+    height: auto;
+    width: 40%;
+    color: #fff;
+}
+
+.hero_image_one_slogan h3 {
+    padding-bottom: 10px;
+    font-size: 120px;
+    line-height: 1em;
+}
+
+.hero_image_one_content {
+    position: absolute;
+    right: 0;
+    padding: 6% 6% 5% 0%;
+    height: auto;
+    width: 40%;
+    color: #fff;
+}
+
+.hero_image_one_content p {
+    padding-bottom: 20px;
+    font-size: 34px;
+    font-weight: 200;
+    text-align: right;
+}
+
+.vivre_btn_box {
+    float: right;
+}
+
+@media (max-width: 768px) {
+
+    .hero_image_one {
+        height: 450px;
+        width: 100%;
+    }
+
+    .hero_image_one_box {
+        position: relative;
+        height: 450px;
+        width: 100%;
+    }
+
+    .hero_image_one_background_image {
+        position: absolute;
+        height: 450px;
+        width: 100%;
+    }
+
+    .hero_image_one_background_image img {
+        object-fit: cover;
+        height: 450px;
+        width: 100%;
+    }
+
+    .hero_image_one_slogan {
+        position: absolute;
+        bottom: 0;
+        padding: 0% 0% 10px 23px;
+        height: auto;
+        width: 40%;
+        color: #fff;
+    }
+
+    .hero_image_one_slogan h3 {
+        font-size: 56px;
+    }
+
+    .hero_image_one_content {
+        position: absolute;
+        right: 0;
+        padding: 25px 30px 20px 0px;
+        height: auto;
+        width: 80%;
+        color: #fff;
+    }
+
+    .hero_image_one_content p {
+        padding-bottom: 20px;
+        font-size: 16px;
+        font-weight: 200;
+        text-align: right;
+    }
+}
+
+
