@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_appointment_booking,access.appointment_booking,appointment_booking.model_booking_dashboard,base.group_user,1,1,1,1
-access_appointment_booking_room,access.appointment_booking_room,appointment_booking.model_room_booking,base.group_user,1,1,1,1
-access_appointment_booking_info,access.appointment_booking_info,appointment_booking.model_booking_info,base.group_user,1,1,1,1
-access_appointment_booking_slot,access.appointment_booking_slot,appointment_booking.model_room_time_slot,base.group_user,1,1,1,1
