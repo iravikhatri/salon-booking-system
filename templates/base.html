@@ -18,12 +18,19 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="">Home</a>
-            <a href="">Home</a>
-            <a href="">Home</a>
-            <a href="">Home</a>
-        </nav>
+        <div class="topbar">
+            <a class="logo" href="">
+                <img src={% static 'images/vivre.png' %} alt="Vivre Salon"/>
+            </a>
+            <nav>
+                <a href="">Bookings</a>
+                {% if request.user.is_authenticated %}
+                    <a href="">Profile</a>
+                {% else %}
+                    <a href="">Login/Signup</a>
+                {% endif %}
+            </nav>
+        </div>
     </header>
 
     <main role="main">

@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600&display=swap");
 
 :root {
-    --navbar-bg-color: #fff;
-    --navbar-text-color: #0c0c0c;
-    --footer-bg-color: #0c0c0c;
-    --footer-text-color: #fff;
-    --btn-color: #0c0c0c;
     --oswald: 'Oswald', sans-serif;
+
     --white-color: #fff;
     --black-color: #000;
+    --black-text-color: #ffffff;
+    --primary-color: #14df9f;
 }
 
 * {
@@ -43,10 +41,6 @@ a.vivre-btn {
     transition: 0.5s;
 }
 
-.vivre-btn-box {
-    float: right;
-}
-
 .large-container {
     margin: 0px auto;
     width: 1140px;
@@ -64,11 +58,37 @@ a.vivre-btn {
 /* Heeader */
 
 header {
+    position: sticky;
+    z-index: 999;
+    top: 0;
     padding: 12px 0px;
+    background-color: var(--white-color);
+}
+
+header .topbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px auto;
+    width: 1140px;
+}
+
+header .logo img{
+    height: 48px;
+}
+
+header nav{
+    display: flex;
+    column-gap: 24px;
 }
 
 header nav a{
     text-decoration: none;
+    color: var(--black-color);
+}
+
+header nav a:hover{
+    color: var(--primary-color);
 }
 
 /* Footer */
@@ -76,8 +96,8 @@ header nav a{
 .footer {
     height: auto !important;
     width: 100% !important;
-    background-color: var(--footer-bg-color) !important;
-    color: var(--footer-text-color);
+    background-color: var(--black-color) !important;
+    color: var(--black-text-color);
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -123,7 +143,7 @@ header nav a{
 
 footer.footer a {
     font-size: 12px;
-    color: var(--footer-text-color);
+    color: var(--black-text-color);
     opacity: 0.7;
     margin: 0px;
 }
@@ -131,7 +151,7 @@ footer.footer a {
 .footer a:hover,
 .footer .footer-slogan:hover,
 .footer .para-block:hover {
-    color: var(--footer-text-color);
+    color: var(--black-blackolor);
     opacity: 1;
 }
 
@@ -144,7 +164,7 @@ footer.footer a {
 .footer .para-block {
     display: block;
     font-size: 12px;
-    color: var(--footer-text-color);
+    color: var(--black-text-color);
     opacity: 0.7;
     margin: 0px;
 }
@@ -176,7 +196,10 @@ a.vivre-btn {
 
 .vivre-btn:hover {
     text-decoration: none;
-    background-image: linear-gradient(to right, rgb(170, 178, 250), rgb(226, 72, 231));
+    background-image: linear-gradient(
+        to right,
+        rgb(170, 178, 250),
+        rgb(226, 72, 231));
     color: var(--white-color);
     transition: .5s;
 }
@@ -192,70 +215,61 @@ a.vivre-btn {
 
 /* Hero */
 
-.hero-image {
-    height: 660px;
+.hero {
+    height: 720px;
     width: 100%;
 }
 
-.hero-image-box {
+.hero-box {
     position: relative;
-    height: 660px;
+    height: 720px;
     width: 100%;
 }
 
-.hero-image-background-image {
+.hero-background {
     position: absolute;
-    height: 660px;
+    height: 720px;
     width: 100%;
 }
 
-.hero-image-background-image img {
+.hero-background img {
     object-fit: cover;
-    height: 660px;
+    height: 720px;
     width: 100%;
 }
 
-.hero-image-cover {
+.hero-cover {
     position: absolute;
-    width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, 0.474);
+    display: flex;
+    align-items: center;
+    padding: 0% 8%;
 }
 
-.hero-image-slogan {
-    position: absolute;
-    bottom: 0;
-    padding: 0% 0% 5% 5%;
-    height: auto;
-    width: 40%;
+.hero-slogan {
+    width: 440px;
     color: var(--white-color);
+    text-align: right;
 }
 
-.hero-image-slogan h3 {
+.hero-slogan h3 {
     padding-bottom: 10px;
     font-size: 120px;
     line-height: 1em;
 }
 
-.hero-image-content {
-    position: absolute;
-    right: 0;
-    padding: 6% 6% 5% 0%;
-    height: auto;
-    width: 40%;
+.hero-content {
+    width: 100%;
     color: var(--white-color);
 }
 
-.hero-image-content p {
+.hero-content p {
     padding-bottom: 20px;
     font-size: 34px;
     font-weight: 200;
-    text-align: right;
 }
 
-.vivre-btn-box {
-    float: right;
-}
 
 @media (max-width: 768px) {
 
@@ -312,121 +326,6 @@ a.vivre-btn {
     }
 }
 
-.hero-image {
-    height: 660px;
-    width: 100%;
-}
-
-.hero-image-box {
-    position: relative;
-    height: 660px;
-    width: 100%;
-}
-
-.hero-image-background-image {
-    position: absolute;
-    height: 660px;
-    width: 100%;
-}
-
-.hero-image-background-image img {
-    object-fit: cover;
-    height: 660px;
-    width: 100%;
-}
-
-.hero-image-cover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .2);
-}
-
-.hero-image-slogan {
-    position: absolute;
-    bottom: 0;
-    padding: 0% 0% 5% 5%;
-    height: auto;
-    width: 40%;
-    color: var(--white-color);
-}
-
-.hero-image-slogan h3 {
-    padding-bottom: 10px;
-    font-size: 120px;
-    line-height: 1em;
-}
-
-.hero-image-content {
-    position: absolute;
-    right: 0;
-    padding: 6% 6% 5% 0%;
-    height: auto;
-    width: 40%;
-    color: var(--white-color);
-}
-
-.hero-image-content p {
-    padding-bottom: 20px;
-    font-size: 34px;
-    font-weight: 200;
-    text-align: right;
-}
-
-
-@media (max-width: 768px) {
-    .hero-image {
-        height: 450px;
-        width: 100%;
-    }
-
-    .hero-image-box {
-        position: relative;
-        height: 450px;
-        width: 100%;
-    }
-
-    .hero-image-background-image {
-        position: absolute;
-        height: 450px;
-        width: 100%;
-    }
-
-    .hero-image-background-image img {
-        object-fit: cover;
-        height: 450px;
-        width: 100%;
-    }
-
-    .hero-image-slogan {
-        position: absolute;
-        bottom: 0;
-        padding: 0% 0% 10px 23px;
-        height: auto;
-        width: 40%;
-        color: var(--white-color);
-    }
-
-    .hero-image-slogan h3 {
-        font-size: 56px;
-    }
-
-    .hero-image-content {
-        position: absolute;
-        right: 0;
-        padding: 25px 30px 20px 0px;
-        height: auto;
-        width: 80%;
-        color: var(--white-color);
-    }
-
-    .hero-image-content p {
-        padding-bottom: 20px;
-        font-size: 16px;
-        font-weight: 200;
-        text-align: right;
-    }
-}
 
 .heading {
     padding: 40px 30px;
