@@ -17,6 +17,14 @@
 
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="">Home</a>
+            <a href="">Home</a>
+            <a href="">Home</a>
+            <a href="">Home</a>
+        </nav>
+    </header>
 
     <main role="main">
         {% block content %}{% endblock %}
@@ -26,48 +34,48 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="footer_logo">
+                    <div class="footer-logo">
                         <img src={% static 'images/vivre.png' %} alt="Vivre Salon"/>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="float_links">
-                        <div class="footer_social_links">
-                            <span class="social_links">
+                    <div class="float-links">
+                        <div class="footer-social-links">
+                            <span class="social-links">
                                 <p class="pr-3">Follow Us</p>
                             </span>
-                            <span class="social_links">
-                                <a class="social_link" href="website.social_facebook">
+                            <span class="social-links">
+                                <a class="social-link" href="website.social-facebook">
                                     <i class="fa fa-facebook-square"></i>
                                 </a>
                             </span>
-                            <span class="social_links">
-                                <a class="social_link" href="/website.social_twitter">
+                            <span class="social-links">
+                                <a class="social-link" href="/website.social-twitter">
                                     <i class="fa fa-twitter"></i>
                                 </a>
                             </span>
-                            <span class="social_links">
-                                <a class="social_link" href="/website.social_instagram">
+                            <span class="social-links">
+                                <a class="social-link" href="/website.social-instagram">
                                     <i class="fa fa-instagram"></i>
                                 </a>
                             </span>
-                            <span class="social_links">
-                                <a class="social_link" href="/website.social_youtube">
+                            <span class="social-links">
+                                <a class="social-link" href="/website.social-youtube">
                                     <i class="fa fa-youtube-play"></i>
                                 </a>
                             </span>
-                            <span class="social_links">
-                                <a class="social_link" href="/website.social_linkedin">
+                            <span class="social-links">
+                                <a class="social-link" href="/website.social-linkedin">
                                     <i class="fa fa-linkedin"></i>
                                 </a>
                             </span>
-                            <span class="social_links">
-                                <a class="social_link" href="/website.social_github">
+                            <span class="social-links">
+                                <a class="social-link" href="/website.social-github">
                                     <i class="fa fa-github"></i>
                                 </a>
                             </span>
-                            <span class="social_links">
-                                <a class="social_link" href="/website.social_googleplus" rel="publisher">
+                            <span class="social-links">
+                                <a class="social-link" href="/website.social-googleplus" rel="publisher">
                                     <i class="fa fa-google-plus-square"></i>
                                 </a>
                             </span>
@@ -95,7 +103,6 @@
                     </span>
                 </div>
                 <div class="footer-block">
-                    <t set="company_object" value="request.env.ref('base.main_company')" />
                     <h4>Visits</h4>
                     <span class="para-block">
                         <span class="block para">
