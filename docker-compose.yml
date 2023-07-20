@@ -1,0 +1,30 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: app
+    container_name: app
+    image: app:latest
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+
+  postgres:
+    image: postgres:13.2
+    container_name: postgres
+    hostname: postgres
+    platform: linux/amd64
+    environment:
+        POSTGRES_DB: vivre_local
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+    ports:
+        - "5433:5432"
+    volumes:
+        - .:/data
